@@ -19,5 +19,5 @@ EXPOSE 8080
 # Variables de entorno por defecto
 ENV JAVA_OPTS="-Xmx512m -Xms256m"
 
-# Comando para ejecutar la aplicación (busca cualquier JAR en target)
-ENTRYPOINT ["sh", "-c", "java $JAVA_OPTS -jar target/*.jar"]
+# Comando para ejecutar la aplicación
+ENTRYPOINT ["sh", "-c", "sleep 5 && java $JAVA_OPTS -jar target/*.jar"]
